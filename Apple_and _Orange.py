@@ -1,4 +1,4 @@
-st = input().split()
+st=input().split()
 house_cordl = st[0]
 house_cordr = st[1]
  
