@@ -26,7 +26,7 @@ for i in range(1,limit+1):
             if count == number_factors:
                 final_list.append(i)
 
-n = 0
+n=0
 for i in final_list:
     count = 0
     for x in multiples_list:
