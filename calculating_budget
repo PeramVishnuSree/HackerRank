@@ -1,0 +1,13 @@
+budget, kb_models, usb_models = input().split()
+budget, kb_models, usb_models = [int(budget), int(kb_models), int(usb_models)]
+
+kb = [int(kb_price) for kb_price in input().strip().split(' ')]
+usb = [int(usb_price) for usb_price in input().strip().split(' ')]
+final_price = -1
+
+for i in kb:
+    for j in usb:
+        if i+j <= budget and i+j > final_price :
+            final_price = i+j
+            
+print(final_price)
