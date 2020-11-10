@@ -1,0 +1,23 @@
+num_birds = int(input())
+bird_ids = input().split()
+tracker = {}
+for i in bird_ids:
+    if i not in tracker:
+        tracker[i] = 1
+    elif i in tracker:
+        tracker[i] = tracker[i] + 1
+        
+highest_value = 0
+for key in tracker:
+    if tracker[key]> highest_value:
+        highest_value = tracker[key]
+        
+bird_ids = []
+for key in tracker:
+    if tracker[key] == highest_value:
+        bird_ids.append(key)
+        
+if len(bird_ids) >0 :
+    print(min(bird_ids))
+else:
+    print(bird_ids[0])
