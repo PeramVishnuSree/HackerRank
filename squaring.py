@@ -1,13 +1,12 @@
 testcases = int(input())
 
-def function(a,b):
-    count = 0
-    for i in range(a,b+1):
-        if i**(1/2) == int(i**(1/2)):
-            count +=1
-    return count
+def f(num1,num2) :
+    import math
+    count = int(math.sqrt(num2)) - int(math.sqrt(num1))
+    if int(math.sqrt(num1)) - math.sqrt(num1) == 0:
+        count = int(math.sqrt(num2)) - int(math.sqrt(num1)) + 1
+    print(count)
 
 for i in range(testcases):
     a,b = [int(x) for x in input().split(' ')]
-    print(function(a,b))
-    
+    f(a,b)
