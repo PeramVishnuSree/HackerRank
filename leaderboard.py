@@ -13,3 +13,4 @@ l = int(input())
 scores = [int(x) for x in input().split(' ')]
 for k in scores:
     print(function(lb,k))
+#comment
